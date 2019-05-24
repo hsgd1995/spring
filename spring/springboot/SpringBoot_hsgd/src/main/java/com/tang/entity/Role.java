@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 角色
+ * mybatis-plus代码生成工具测试类-角色
  * </p>
  *
  * @author tang

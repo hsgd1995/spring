@@ -26,7 +26,7 @@ import com.tang.realm.UserRealm;
  * @author Administrator
  * @date   2019年5月22日
  */
-//@Configuration
+@Configuration
 public class ShiroConfiguration {
 	/**
 	 * ShiroFilterFactoryBean 处理拦截资源文件问题。

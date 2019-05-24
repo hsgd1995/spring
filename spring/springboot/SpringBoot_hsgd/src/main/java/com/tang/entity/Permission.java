@@ -10,7 +10,7 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
+ * mybatis-plus代码生成工具测试类-权限
  * </p>
  *
  * @author tang
@@ -18,14 +18,13 @@ import java.io.Serializable;
  */
 public class Permission extends Model<Permission> {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-	@TableId(value="id", type= IdType.AUTO)
+	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
 	private String pername;
 	@TableField("role_id")
 	private Integer roleId;
-
 
 	public Integer getId() {
 		return id;
@@ -67,10 +66,6 @@ public class Permission extends Model<Permission> {
 
 	@Override
 	public String toString() {
-		return "Permission{" +
-			", id=" + id +
-			", pername=" + pername +
-			", roleId=" + roleId +
-			"}";
+		return "Permission{" + ", id=" + id + ", pername=" + pername + ", roleId=" + roleId + "}";
 	}
 }

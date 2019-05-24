@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.tang.async.UserAsync;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * 页面跳转类
  * 
@@ -15,6 +17,7 @@ import com.tang.async.UserAsync;
  * @date 2019年5月21日
  */
 @Controller
+@Slf4j
 public class PageController {
 
 	@Autowired
@@ -37,9 +40,9 @@ public class PageController {
 
 	@RequestMapping("login")
 	public String login() {
-		System.out.println("主线程id:" + Thread.currentThread().getId());
+		log.info("主线程id:" + Thread.currentThread().getId());
 		userAsync.AsyncTest();
-		System.out.println("配置文件myName:"+myName);
+		log.info("配置文件myName:"+myName);
 		return "login";
 	}
 }
