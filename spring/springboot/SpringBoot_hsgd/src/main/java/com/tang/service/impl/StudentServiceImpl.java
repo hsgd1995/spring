@@ -1,5 +1,7 @@
 package com.tang.service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,6 +23,11 @@ public class StudentServiceImpl implements IStudentService{
 		return studentRepository.getOne(id);
 	}
 
+	@Override
+	public List<Student> findAll(){
+		return studentRepository.findAll();
+	}
+	
 	@Override
 	public void addStudent(Student student) {
 		studentRepository.save(student);

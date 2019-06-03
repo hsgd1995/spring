@@ -18,7 +18,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @JsonIgnoreProperties({ "handler","hibernateLazyInitializer" })
 public class Student implements Serializable {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 83021029595778784L;
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -31,9 +31,6 @@ public class Student implements Serializable {
 		super();
 	}
 
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
 
 	public Long getId() {
 		return id;

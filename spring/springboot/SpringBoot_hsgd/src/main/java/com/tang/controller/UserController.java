@@ -76,7 +76,7 @@ public class UserController {
 	 * @param sex
 	 * @return
 	 */
-	@RequiresPermissions("user:select")
+	@RequiresPermissions("user:select")// 去掉注解，把url存在数据库中
 	@RequestMapping("getUserBySex")
 	public Object getBySex(String sex) {
 		return userService.getUserBySex(sex);
@@ -91,6 +91,7 @@ public class UserController {
 	public Object loginAction(String loginname,String password){
 		Subject subject = SecurityUtils.getSubject();
 		String newPass = new Md5Hash(password,"123tang").toString();
+		System.out.println("加密后的密码：" + newPass);
 		AuthenticationToken token = new UsernamePasswordToken(loginname,newPass);
 		try {
 			subject.login(token);

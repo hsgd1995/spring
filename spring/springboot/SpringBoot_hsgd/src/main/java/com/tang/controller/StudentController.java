@@ -31,6 +31,11 @@ public class StudentController {
 		return s;
 	}
 
+	@RequestMapping("findAll")
+	public Object findAll(){
+		return studentService.findAll();
+	}
+	
 	/**
 	 * 添加学生
 	 * @param student

@@ -1,5 +1,7 @@
 package com.tang.service;
 
+import java.util.List;
+
 import com.tang.entity.Student;
 
 /**
@@ -23,5 +25,7 @@ public interface IStudentService {
 	 * @param student
 	 */
 	void addStudent(Student student);
+	
+	List<Student> findAll();
 
 }

@@ -6,6 +6,6 @@ package com.tang.common;
  * @date   2019年5月21日
  */
 public class UserTableConst {
-	public static final String USER_TABLE = "user";
+	public static final String USER_TABLE = "user_info";
 
 }
