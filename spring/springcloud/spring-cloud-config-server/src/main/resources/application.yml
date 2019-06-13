@@ -1,0 +1,18 @@
+server:
+  port: 8001
+spring:
+  application:
+    name: spring-cloud-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hsgd1995/spring-cloud-config.git/     # 配置git仓库的地址
+          search-paths: config-repo                             # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: hsgd1995                                            # git仓库的账号
+          password: qwe379639511
+          
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8000/eureka/
